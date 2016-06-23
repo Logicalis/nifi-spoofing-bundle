@@ -127,6 +127,40 @@ language governing permissions and limitations under the License. -->
                                     </mappings>
                                 </configuration>
                             </execution>
+                            <execution>
+                                <id>build-cluster-bin-rpm</id>
+                                <goals>
+                                    <goal>attached-rpm</goal>
+                                </goals>
+                                <configuration>
+                                    <group></group>
+                                    <name>nifi-spoofing-bundle-cluster</name>
+                                    <classifier>bin</classifier>
+                                    <provides>
+                                        <provide>nifi-spoofing-bundle</provide>
+                                    </provides>
+                                    <mappings>
+                                        <mapping>
+                                            <directoryIncluded>false</directoryIncluded>
+                                            <directory>/opt/nifi/nifi-${nifi.base.version}/ncm/lib</directory>
+                                            <dependency>
+                                                <includes>
+                                                    <include>org.apache.nifi:nifi-spoofing-nar</include>
+                                                </includes>
+                                            </dependency>
+                                        </mapping>
+                                        <mapping>
+                                            <directoryIncluded>false</directoryIncluded>
+                                            <directory>/opt/nifi/nifi-${nifi.base.version}/node/lib</directory>
+                                            <dependency>
+                                                <includes>
+                                                    <include>org.apache.nifi:nifi-spoofing-nar</include>
+                                                </includes>
+                                            </dependency>
+                                        </mapping>
+                                    </mappings>
+                                </configuration>
+                            </execution>
                         </executions>
                     </plugin>
                 </plugins>
