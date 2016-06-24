@@ -109,10 +109,11 @@ language governing permissions and limitations under the License. -->
                                     <goal>attached-rpm</goal>
                                 </goals>
                                 <configuration>
+                                    <name>nifi-spoofing-nar</name>
                                     <group></group>
                                     <classifier>bin</classifier>
                                     <provides>
-                                        <provide>nifi-spoofing-bundle</provide>
+                                        <provide>nifi-spoofing-nar</provide>
                                     </provides>
                                     <mappings>
                                         <mapping>
@@ -134,10 +135,10 @@ language governing permissions and limitations under the License. -->
                                 </goals>
                                 <configuration>
                                     <group></group>
-                                    <name>nifi-spoofing-bundle-ncm</name>
+                                    <name>nifi-spoofing-nar-ncm</name>
                                     <classifier>bin</classifier>
                                     <provides>
-                                        <provide>nifi-spoofing-bundle</provide>
+                                        <provide>nifi-spoofing-nar</provide>
                                     </provides>
                                     <mappings>
                                         <mapping>
@@ -159,10 +160,10 @@ language governing permissions and limitations under the License. -->
                                 </goals>
                                 <configuration>
                                     <group></group>
-                                    <name>nifi-spoofing-bundle-node</name>
+                                    <name>nifi-spoofing-nar-node</name>
                                     <classifier>bin</classifier>
                                     <provides>
-                                        <provide>nifi-spoofing-bundle</provide>
+                                        <provide>nifi-spoofing-nar</provide>
                                     </provides>
                                     <mappings>
                                         <mapping>
