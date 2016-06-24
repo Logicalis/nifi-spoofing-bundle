@@ -128,13 +128,13 @@ language governing permissions and limitations under the License. -->
                                 </configuration>
                             </execution>
                             <execution>
-                                <id>build-cluster-bin-rpm</id>
+                                <id>build-ncm-bin-rpm</id>
                                 <goals>
                                     <goal>attached-rpm</goal>
                                 </goals>
                                 <configuration>
                                     <group></group>
-                                    <name>nifi-spoofing-bundle-cluster</name>
+                                    <name>nifi-spoofing-bundle-ncm</name>
                                     <classifier>bin</classifier>
                                     <provides>
                                         <provide>nifi-spoofing-bundle</provide>
@@ -149,6 +149,22 @@ language governing permissions and limitations under the License. -->
                                                 </includes>
                                             </dependency>
                                         </mapping>
+                                    </mappings>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>build-node-bin-rpm</id>
+                                <goals>
+                                    <goal>attached-rpm</goal>
+                                </goals>
+                                <configuration>
+                                    <group></group>
+                                    <name>nifi-spoofing-bundle-node</name>
+                                    <classifier>bin</classifier>
+                                    <provides>
+                                        <provide>nifi-spoofing-bundle</provide>
+                                    </provides>
+                                    <mappings>
                                         <mapping>
                                             <directoryIncluded>false</directoryIncluded>
                                             <directory>/opt/nifi/nifi-${nifi.base.version}/node/lib</directory>
